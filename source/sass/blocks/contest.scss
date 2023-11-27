@@ -1,0 +1,253 @@
+.contest__wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1365 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.contest__inform {
+  display: flex;
+  margin-bottom: 120px;
+
+  @include vp-1365 {
+    margin-bottom: 101px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 71px;
+    flex-direction: column;
+  }
+}
+
+.contest__text {
+  color: $color-default-white;
+  background-color: #ed0335;
+  padding: 80px;
+  padding-bottom: 78px;
+  padding-top: 81px;
+
+  @include vp-1365 {
+    width: 43%;
+    padding-top: 39px;
+    padding-bottom: 45px;
+    padding-left: 6.6%;
+    padding-right: 6.6%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 13.9%;
+    padding-right: 13.9%;
+  }
+}
+
+.text__name {
+  font-family: "AlumniSans";
+  font-size: 82px;
+  font-weight: 600;
+  line-height: 76px;
+  letter-spacing: 2.46px;
+  text-transform: uppercase;
+  margin: 0;
+
+  @include vp-1365 {
+    font-size: 48px;
+    line-height: 46px;
+    letter-spacing: 1.44px;
+  }
+}
+
+.text__wrapper {
+  display: grid;
+  grid-template-columns: 180px 92px;
+  gap: 68px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 23px;
+
+  @include vp-1365 {
+    grid-template-columns: 53.4% 27.7%;
+    gap: 18.8%;
+    margin-bottom: 6px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 13px;
+    gap: 19.9%;
+  }
+}
+
+.text__data-wrapper {
+  max-width: 92px;
+}
+
+
+.text__data {
+  display: grid;
+  grid-template-columns: 21px 37px;
+  column-gap: 6px;
+  row-gap: 11px;
+  margin-bottom: 20px;
+
+  @include vp-1365 {
+    grid-template-columns: 13px 26px;
+    column-gap: 2px;
+    row-gap: 2px;
+    margin-bottom: 8px;
+  }
+}
+
+.text__text-data {
+  position: relative;
+  grid-column: 1/-1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 1px;
+    background-color: $color-default-white;
+    top: 30px;
+    left: 0;
+
+    @include vp-1365 {
+      width: 42px;
+      top: 24px;
+    }
+
+    @include vp-767 {
+      top: 19px;
+    }
+  }
+}
+
+.text__text-time {
+  position: relative;
+  display: block;
+  margin-bottom: 11px;
+
+  @include vp-1365 {
+    margin-bottom: 2px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 92px;
+    height: 1px;
+    background-color: $color-default-white;
+    top: 30px;
+    left: 0;
+
+    @include vp-1365 {
+      width: 56px;
+      top: 24px;
+    }
+
+    @include vp-767 {
+      top: 18px;
+    }
+  }
+}
+
+.text__month {
+  grid-column: 2/-1;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+
+  @include vp-1365 {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.text__day,
+.text__time {
+  display: block;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+
+  @include vp-1365 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.contest__description {
+  font-family: "Roboto";
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 56px;
+
+  @include vp-1365 {
+    display: flex;
+    width: 202px;
+    margin: 0;
+    margin-bottom: 21px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+}
+
+.contest__button {
+  border: 2px solid $color-default-white;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  line-height: 12px;
+  display: flex;
+  width: 340px;
+  padding: 25px 56px;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-1365 {
+    padding: 20px 14.9%;
+    width: 100%;
+  }
+}
+
+.contest__image {
+  width: 660px;
+  height: 500px;
+
+  @include vp-1365 {
+    width: 57%;
+    height: 324px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 292px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

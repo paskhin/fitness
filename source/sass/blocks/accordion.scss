@@ -1,0 +1,139 @@
+.accordion {
+  margin: 0;
+
+  // width: 860px;
+
+  background-color: #f8f9fc;
+  border-top: 1px solid rgba(28, 51, 116, 0.2);
+
+  & & {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element:last-child {
+    margin-bottom: 0;
+  }
+
+  &__element {
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 0;
+    border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+  }
+
+  &__element.is-active > button {
+    opacity: 1;
+    padding-bottom: 8px;
+
+    @include vp-767 {
+      padding-bottom: 20px;
+    }
+
+    &::before {
+      background-color: #1c3374;
+      top: calc(50% - 8px);
+
+      @include vp-767 {
+        top: calc(50% - 14px);
+      }
+    }
+
+    svg {
+      color: $color-default-white;
+      height: 1px;
+      width: 20px;
+      background-color: $color-default-white;
+      top: calc(50% + 11px);
+
+      @include vp-767 {
+        width: 14px;
+        top: calc(50% + 1px);
+      }
+    }
+  }
+
+  button {
+    position: relative;
+    font-family: "Roboto";
+    width: 100%;
+    padding: 33px 40px 33px 0;
+    color: $color-button-active;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+
+    @include vp-1365 {
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+      padding: 22px 62px 22px 0;
+    }
+
+    @include hover-focus {
+      &::before {
+        background-color: #1c3374;
+      }
+
+      svg {
+        color: $color-default-white;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $color-button-active;
+      top: calc(50% - 20px);
+      right: 0;
+
+      @include vp-767 {
+        width: 30px;
+        height: 30px;
+        top: calc(50% - 15px);
+      }
+    }
+
+    svg {
+      position: absolute;
+      right: 10px;
+      top: calc(50% - 10px);
+
+      @include vp-767 {
+        width: 14px;
+        height: 14px;
+        top: calc(50% - 7px);
+        right: 8px;
+      }
+    }
+  }
+
+  &__wrapper {
+    p {
+      color: $color-button-active;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 24px;
+      padding-right: 160px;
+      padding-bottom: 25px;
+      margin: 0;
+      margin-top: 4px;
+
+      @include vp-767 {
+        font-size: 16px;
+        padding-right: 0;
+      }
+    }
+  }
+}

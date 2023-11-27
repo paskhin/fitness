@@ -1,0 +1,165 @@
+.footer {
+  background-color: $color-footer;
+}
+
+.footer__wrapper {
+  background-color: $color-footer;
+}
+
+.container-footer {
+  padding: 0;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 103px;
+
+  @include vp-1365 {
+    padding: 45px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 30px 4.7% 45px;
+  }
+}
+
+.footer__logo {
+  margin-right: 55px;
+
+  @include vp-1365 {
+    margin-right: 44px;
+
+    img {
+      width: 100px;
+      height: 22px;
+    }
+  }
+
+  @include vp-767 {
+    align-self: self-start;
+    margin-bottom: 30px;
+  }
+}
+
+.footer-nav {
+  @include vp-767 {
+    align-self: self-start;
+  }
+}
+
+.footer-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-767 {
+    margin-bottom: 55px;
+  }
+}
+
+.footer-nav__item {
+  margin-right: 40px;
+
+  @include vp-1365 {
+    margin-right: 30px;
+  }
+}
+
+.footer-nav__item-button {
+  position: relative;
+  color: $color-default-white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 0;
+  background-color: $color-transparent;
+  border: none;
+
+  &[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  @include hover {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $color-default-white;
+      top: 26px;
+    }
+  }
+
+  &:focus {
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% + 20px);
+      height: 32px;
+      background-color: $color-transparent;
+      border: 1px solid $color-default-white;
+      left: -10px;
+      top: -5px;
+    }
+  }
+}
+
+.social {
+  display: grid;
+  grid-template-columns: 25px 25px 25px;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-left: 69px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1365 {
+    margin-left: 18px;
+  }
+}
+
+.social__item {
+  border-radius: 50%;
+  background-color: $color-default-white;
+  color: $color-footer;
+
+  @include hover-focus {
+    background-color: #103aae;
+
+    svg {
+      color: $color-default-white;
+    }
+  }
+
+  @include active {
+    background-color: $color-button-active;
+  }
+}
+
+.social__link {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__link--vkontakte svg {
+  margin-top: 2px;
+}
+
+.social-item-disabled {
+  background-color: $color-default-white;
+  opacity: 0.3;
+
+  svg {
+    color: $color-footer;
+  }
+}
